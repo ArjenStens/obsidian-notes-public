@@ -12,7 +12,7 @@ const config = {
 
   // Navigation
   navbarTitle: {
-    text: "BlackRiver - Digital Garden",
+    text: "Home",
     logo: "/images/logo.png",
   },
   navLinks: [{ href: "/blog/arjenstens.com", name: "Blog ArjenStens" }],
