@@ -11,10 +11,6 @@ const config = {
   domain: "https://notes.arjenstens.com",
 
   // Navigation
-  navbarTitle: {
-    text: "Home",
-    logo: "/images/logo.png",
-  },
   navLinks: [{ href: "/blog/arjenstens.com", name: "Blog ArjenStens" }],
   navLinks: [
     { href: "/blog/blackrivertech.nl", name: "Blog BlackriverTech.nl" },
