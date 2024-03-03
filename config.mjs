@@ -15,10 +15,6 @@ const config = {
     { href: "/blog/arjenstens.com", name: "Blog ArjenStens" },
     { href: "/blog/blackrivertech.nl", name: "Blog BlackriverTech.nl" },
   ],
-
-  // Encourage contributing
-  showEditLink: true,
-  editLinkRoot: "https://github.com/ArjenStens/obsidian-notes-public",
 };
 
 export default config;
