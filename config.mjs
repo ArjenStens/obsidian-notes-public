@@ -3,17 +3,26 @@
  */
 
 const config = {
-  title: "BlackRiver notes",
+  title: "BlackRiver - Digital Garden",
   description:
     "Welcome to my digital garden where I share my knowledge with the world!",
   author: "Arjen Stens",
-  logo: "/images/logo.svg",
+  logo: "/images/logo.png",
   domain: "https://notes.arjenstens.com",
-  // links to the pages you want to link to in the navbar and in the footer
+
+  // Navigation
+  navbarTitle: {
+    text: "BlackRiver - Digital Garden",
+    logo: "/images/logo.png",
+  },
   navLinks: [{ href: "/blog/arjenstens.com", name: "Blog ArjenStens" }],
   navLinks: [
     { href: "/blog/blackrivertech.nl", name: "Blog BlackriverTech.nl" },
   ],
+
+  // Encourage contributing
+  showEditLink: true,
+  editLinkRoot: "https://github.com/ArjenStens/obsidian-notes-public",
 };
 
 export default config;
