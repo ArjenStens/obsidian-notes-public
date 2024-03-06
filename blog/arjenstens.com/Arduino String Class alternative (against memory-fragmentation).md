@@ -46,6 +46,7 @@ Out of this, the [StackString library](https://gitlab.com/arduino-libraries/stac
 ## How to use
 
 Creating a new StackString is dead simple. First include the library on top of your code and make sure you `use` the namespace it is in:
+
 ```c++
 #include <StackString.hpp>
 using namespace Stack; // Important!
@@ -81,6 +82,6 @@ You can add this library to your project in the following three different ways:
 
 ## Useful links
 
-**Article on heap fragmentation on** [cpp4arduino.com](https://cpp4arduino.com/2018/11/06/what-is-heap-fragmentation.html)  
-**A library for timing of your code:** [StensTimer](//arjenstens.com/rock-arduino-multi-tasking-stenstimer/)  
+**Article on heap fragmentation on** [cpp4arduino.com](https://cpp4arduino.com/2018/11/06/what-is-heap-fragmentation.html)
+**A library for timing of your code:** [StensTimer](//arjenstens.com/rock-arduino-multi-tasking-stenstimer/)
 **All functionality in the StackString library:** [StackString](https://gitlab.com/arduino-libraries/stackstring)
