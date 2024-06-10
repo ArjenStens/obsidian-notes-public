@@ -1,4 +1,4 @@
-![[sweden.jpeg]]
+'image'
 
 **Bold intro**
 
