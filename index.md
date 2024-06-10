@@ -4,7 +4,7 @@ publish: true
 
 Hi there and welcome to my public notes, or 'second brain'. Here I publicly share notes on interesting topics that I'm exploring. Don't consider anything you read here as absolute truth, as I may be wrong in my interpretation when I'm learning something new!
 
-Below you find some links to an old (Wordpress) blog that I hosted for a while.
+Below you find some links to my blogposts.
 
 # The Tales
 - [[PCT, side effects may include...]]
