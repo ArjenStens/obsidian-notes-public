@@ -8,4 +8,4 @@ featured_image: _images/post-image.jpg
 ---
 
 ## some title
-[[PCT, side effects may include...]]
+[[PCT - side effects may include]]

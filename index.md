@@ -7,7 +7,7 @@ Hi there and welcome to my public notes, or 'second brain'. Here I publicly shar
 Below you find some links to my blogposts.
 
 # The Tales
-- [[PCT, side effects may include...]]
+- [[PCT - side effects may include]]
 
 # The Tech
 
