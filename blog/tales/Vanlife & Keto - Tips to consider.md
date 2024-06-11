@@ -1,3 +1,7 @@
+---
+publish: true
+---
+
 
 **After having spent the better part of last year on the Pacific Crest Trail essentially eating the worst foods humanity has ever produced it was time to shake things up. I ended up attempting adopting a Ketogenic lifestyle. But what if you want to adopt this not-so-conventional lifestyle while you're already doing the not-so-conventional vanlife lifestyle...?**
 
