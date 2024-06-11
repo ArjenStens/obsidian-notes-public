@@ -14,3 +14,6 @@ Secondly, I'm currently really hitting the limit on keeping stuff fresh with onl
 
 # You might need more kitchen (gear)
 Going (clean) Keto means you're gonna be spending a lot more time in your kitchen. This advice isn't really gonna help you much if you've already built out your rig, but sizing your kitchen big enough to accommodate cooking is really, really important here. When i built out my van I anticipated I would spend some time in the kitchen for the majority of my meals. This means I can proudly say I built in a well-sized kitchen sink + tap, a 2-burner stove and a shit-ton of countertop space to work on. Two parts of my counter can be extended and then there's my regular table I can fold out. If shit hits the fan I can even put in my convertible office-desk.
+
+Gave a good one!
+- Arjen
