@@ -8,39 +8,39 @@ publish: true
 ![[Pasted image 20231010164751.png]]
 **In this blog post I will show you how you can easily multi-task with your Arduino projects, so you don't have to use the delay() function anymore. With an easy step-by-step guide you can make your** **Arduino projects more efficient than ever before.**
 
-# Why should I use StensTimer?
+## Why should I use StensTimer?
 
 There are several reasons to consider using StensTimer. Below I will provide some reasons to use a timer library and why it should be this one.
 
 ![[Pasted image 20231010162559.png]] Is it worth the wait?
 
-## Because delay() sucks
+### Because delay() sucks
 
 Admit it, how many times did you find yourself in a situation where you needed to execute some code with a delay but didn't want to just wait for it while doing nothing else? I know I did, more than once. This here is why you should ditch Arduino's delay()delay()` function in the first place. The `delay()` function sucks up valuable time that can instead be used for much better things than just sitting around and doing nothing.
 
-## Easy multitasking
+### Easy multitasking
 
-### Keeping track of time
+#### Keeping track of time
 
 Don't worry, you don't have to keep track of time yourself, just let StensTimer handle the timing. This enables you to easily create a new timer with any delay you wish, at any moment. The only thing you have to do is setting up a function for StensTimer to call when your set timer has elapsed.
 
-### Customization
+#### Customization
 
 There are different timer libraries out there in different shapes and sizes. StensTimer aims to be a very customizable one, which is currently achieved by the following characteristics.
 
-#### Set action ID's
+##### Set action ID's
 
 You can give the timer a message to pass back to you in the form of an action ID you can make up yourself. You can then later use this ID to execute your desired piece of code. You can also change this action ID anytime you wish, in case you want to change behaviour on the fly.
 
-#### Change timeout/interval on runtime
+##### Change timeout/interval on runtime
 
 If ever you have to adjust your timer to another interval you don't have to deal with deleting timers and then creating new ones. You just change the timeout or interval whenever you feel like it.
 
-#### Change repetitions
+##### Change repetitions
 
 Just like changing the timer's timeout or interval you can edit the remaining repetitions. For example: when there is a case where your timer has to run one extra time (or more) you don't have to create a new timer.
 
-## Class-instance callbacks (advanced)
+### Class-instance callbacks (advanced)
 
 I actually wrote this library to enable timers to call back classes I created multiple instances of. The problem with the basic timer libraries out there is that they don't support timer callbacks on these class instances. In my search for libraries that support this I tried [Auden's delegate library](http://forum.arduino.cc/index.php?topic=86758.0), which worked but unfortunately had quite some negative side-effects at my sketches.
 
@@ -48,11 +48,11 @@ To give you an idea about the possibilities of class-instance callbacks: Imagine
 
 The class-instance callbacks enable you to implement the timer functionality in your cooker alarm class. This means that you only have to write the timing functionality once, no matter how many cooker alarms you create. So if you are dealing with a similar issue you're in the right place.
 ![[Pasted image 20231010162638.png]]
-# How to get the library
+## How to get the library
 
 There are three options available to get the library, each one will be described below.
 
-## PlatformIO library manager
+### PlatformIO library manager
 
 The library is publicly available in PlatformIO's library manager. I highly recommend to start using PlatformIO for your future Arduino projects. Read [here how to get started](//arjenstens.com/platformio-easier-arduino-programming/) with PlatformIO.
 
@@ -60,23 +60,23 @@ When you are using PlatformIO you can go to its library manager and type 'StensT
 
 The library can also be found via [this link](http://platformio.org/lib/show/1942/StensTimer).
 
-## Arduino library manager
+### Arduino library manager
 
 Arduino has a library manager quite similar to that of PlatformIO. You can access this one through the Arduino IDE. To do this, open the IDE and go to **Sketch>Include Library>Manage Libraries...** to open the library manager. Then you can type StensTimer inside the search bar and hit enter. You should then find the library, select your preferred version and hit install.
 
-## Zip download
+### Zip download
 
 If the above options don't suit your needs you can download the library as a Zip file [here](https://gitlab.com/arduino-libraries/stens-timer/repository/master/archive.zip). But be aware that you won't get automatic updates this way.
 ![[Pasted image 20231010162653.png]]
-# How to use the library
+## How to use the library
 
 Once you've downloaded the library you are ready to use it. Here I will explain the basic usage of the library. Soon I'll write a blog post to explain the more advanced usage of the library with class-instance callbacks. You can also check out the included examples for the basic usage as well as the more advanced one.
 
-## Basic setup
+### Basic setup
 
 Before you can create your first timer there are some basic setup steps you need to take. In this paragraph I will guide you through these steps.
 
-### Include
+#### Include
 
 The first step is to include the library in your sketch. Just add the following line at the top of your file.
 
@@ -84,7 +84,7 @@ The first step is to include the library in your sketch. Just add the following 
 #include <StensTimer.h>
 ```
 
-### StensTimer variable
+#### StensTimer variable
 
 The second thing to add to your code is a pointer to the StensTimer instance, which we will assign later. (At this moment just set it to `NULL`). Note that pointer variables are distinguishable by the data type followed by a `*`.
 
@@ -93,7 +93,7 @@ The second thing to add to your code is a pointer to the StensTimer instance, wh
 StensTimer* stensTimer = NULL;
 ```
 
-### The callback function
+#### The callback function
 
 Next, you'll need a function for StensTimer to call whenever a timer has elapsed, you can rename this function however you want. I will just name it `timerCallback`. There are two requirement for the function. The first one is that it has one parameter of the type `Timer*` (pointer to a `Timer` object). The second requirement is that the function must be static. If you want to use a non-static callback function please refer to the class-instance callback example.
 
@@ -103,7 +103,7 @@ void timerCallback(Timer* timer){
 }
 ```
 
-### Inside setup()
+#### Inside setup()
 
 Inside the setup function we will first retrieve the instance of the `StensTimer` class, you can access the timer from everywhere. For convenience we will assign it to the variable we created earlier. After you retrieved the `StensTimer` instance, you can pass the callback function to the library. this function will be used for all timer callbacks. Note that functions are called with `->` instead of `.`, this is because our `stensTimer` variable is a pointer.
 
@@ -115,7 +115,7 @@ stensTimer = StensTimer::getInstance();
 stensTimer->;setStaticCallback(timerCallback);
 ```
 
-### Inside loop()
+#### Inside loop()
 
 Last but not least, the timer's `run()` function should be called at least once every time the `loop()` function is executed. This functions will check for every timer if it has elapsed. if it has, the callback function will be called.
 
@@ -124,7 +124,7 @@ Last but not least, the timer's `run()` function should be called at least once 
 stensTimer->run();
 ```
 
-### A quick summary
+#### A quick summary
 
 When you followed the steps above correctly, your code should look something similar to this:
 ```c++
@@ -152,7 +152,7 @@ void loop() {
 }
 ```
 
-## Creating a timer
+### Creating a timer
 
 Now that your basic setup is complete, you can start creating timers. For this example we will increase a counter by 1 every second. For this, we'll create a global variable:
 
@@ -160,7 +160,7 @@ Now that your basic setup is complete, you can start creating timers. For this e
 int counter = 0;
 ```
 
-### Defining an action
+#### Defining an action
 
 Next, we will define the timer action to use at the top of the file. Defining actions this way is not necessary but it can make your code more readable.
 
@@ -168,7 +168,7 @@ Next, we will define the timer action to use at the top of the file. Defining ac
 #define TICK_ACTION 1
 ```
 
-### Creating the timer
+#### Creating the timer
 
 You can create two types of timers. Infinite repeating ones (using `setInterval(int action, long interval);`) and a timer running a specified amount of times (using `setTimer(int action, long delay, long repetitions)`,  repetitions is optional which defaults to 1).
 
@@ -179,7 +179,7 @@ Timer* myFirstTimer = stensTimer->setInterval(TICK_ACTION, 1000);
 ```
 As you can see you can see in the example above you can store a pointer variable of the newly created timer. This way you can later edit the timer without having to wait until the callback function is being executed.
 
-### Listening for the timer
+#### Listening for the timer
 
 After we created the timer we can add functionality to this timer by listening for the action we attached earlier. We will add the following code inside our `timerCallback()`function to accomplish this.
 
@@ -196,11 +196,11 @@ void timerCallback(Timer* timer){
 }
 ```
 
-## The final result
+### The final result
 
 If you followed all the steps correctly, you can compile the code and upload it to your Arduino.
 
-### Output
+#### Output
 
 ```c++
 counter: 1
@@ -209,7 +209,7 @@ counter: 3
 //coun...
 ```
 
-### Final code
+#### Final code
 ```c++
 #include <Arduino.h>
 #include <StensTimer.h>
@@ -249,7 +249,7 @@ void loop() {
 }
 ```
 
-# Thank you!
+## Thank you!
 
 And that's about it! I hope I made your Arduino programming life just a little bit easier today. Thank you for reading!
 

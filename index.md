@@ -8,11 +8,11 @@ You are looking at my public notes, or 'second brain'. Here I share notes on int
 
 Below you find some links to my blogposts.
 
-# The Tales
+## The Tales
 - [[PCT - side effects may include]]
 - [[Vanlife & Keto - Tips to consider]]
 
-# The Tech
+## The Tech
 
 - [[How to avoid hotspot throttling in the USA on Android]]
 - [[Prevent USB from powering 3D-printer display]]

@@ -8,11 +8,11 @@ publish: true
 ![[Pasted image 20231010163322.png]]
 **Struggling to keep your Arduino projects clean and organized? Then PlatformIO is just what you need! In this article I will show you how can get started with PlatformIO to perfectly manage your Arduino projects.**
 
-# Alright, what is PlatformIO?
+## Alright, what is PlatformIO?
 
 PlatformIO is an Atom package that helps you organize software development for microcontrollers. One of the supported microcontrollers is Arduino. The package provides you with a clean, intuitive interface to organize different projects. It has almost everything that the Arduino IDE has. The package can also compile and upload your code to connected Arduino's.
 
-# Getting PlatformIO
+## Getting PlatformIO
 
 ![[Pasted image 20231010163422.png]]
 
@@ -30,7 +30,7 @@ Now that you have found the package installer you can install the PlatformIO pac
 
 Once all packages are installed Atom will friendly remind you to restart, hit restart and you're all set.
 
-# Setting up your first project
+## Setting up your first project
 
 The first thing you will notice when starting Atom is a new home screen. In this homescreen you can open your recent projects, create new ones and even import your existing Arduino projects.  Also, the home screen includes a library browser where you can download Arduino libraries. If you want you can take a look at a list of all available boards in the boards tab. However, we will continue by creating a new project from scratch.  Go on and click on the '_New Project_' button.
 
@@ -38,13 +38,13 @@ The first thing you will notice when starting Atom is a new home screen. In this
 A new window will pop up asking for the board you are programming, Click the bar and search for your Arduino type (mine is Arduino Uno). Then hit enter. In the second bar look for the Arduino framework. If you wish to use an alternative project location, uncheck the 'Use default location' mark and pick a new location. For now, we will save our new project in the default location. When you are done, hit the finish button. Now your basic project structure will be generated.
 ![[Pasted image 20231010163504.png]]
 
-## It's time to start programming
+### It's time to start programming
 
 ![[Pasted image 20231010163514.png]]
 
 In the project you will find a source folder as well as a library folder where you can add (or write) libraries for your project. You can find the setup and main loop of your project in the main file located in the source folder. As you can see, inside the methods I already added some test code. In the setup the Arduino will write "_Hello, Arjen!_" to the serial monitor once. After that, when te loop starts, every second "_I'm looping!_" will be printed.
 
-## Let's test our program
+### Let's test our program
 
 ![[Pasted image 20231010163622.png]]
 
