@@ -8,6 +8,7 @@ Regular events will 'forever' be stored on Nostr, unless explicitly deleted by a
 ### Applies to kinds
 - Text notes [NIP-01](https://nostr-nips.com/nip-01)
 - Any event `Kind` of `1000` up to (and including) `9999`
+---
 ## Ephemeral
 Ephemeral messages are essentially a 'fire and forget' message. There is no need to retain the information of this event for a long time. This is generally used for handling communication between the relay and the client, such as authentication or payment requests.
 ### Example use-cases
@@ -15,7 +16,7 @@ Ephemeral messages are essentially a 'fire and forget' message. There is no need
 - Handling payments
 ### Applies to kinds
 - Any event `Kind` of `20000` up to (and including) `29999` are considered Ephemeral
-
+---
 ## Replaceable
 Replacable events are ones where only the latest version of it is relevant. For example your profile picture or your Lightning wallet address. You don't want people to send money to an old address that's no longer in use.
 
@@ -27,6 +28,7 @@ Relays will therefore only keep one event of the `Kind`s in this category for yo
 - `Kind=0`
 - `Kind=3`
 - any event `Kind` of `10000` up to (and including) `19999` are considered `Replacable`
+---
 ## Parameterized Replaceable
 
 Parameterized Replacable events are a more flexible than the 'Replacable' events. Where the 'Replacable' events will exist once for your public key + kind (example: your profile picture), the 'Parameterized Replacable' introduces the `d` tag. This makes it so that you can have multiple events of the same kind, and still modify them later on.
@@ -43,10 +45,9 @@ The relays will pick up this event and notice they already have a version of thi
 
 ### Applies to kinds
 - Any event `Kind` of `30000` up to (and including) `39999` are considered `Parameterized Replacable`
+---
 ## Expiring
-- Disappearing chats
-- Announcements
-- NIP-40
+- TODO
 
 ### Applies to kinds
 - Any
