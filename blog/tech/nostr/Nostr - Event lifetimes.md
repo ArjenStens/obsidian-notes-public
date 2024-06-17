@@ -25,10 +25,17 @@ Relays will therefore only keep one event of the `Kind`s in this category for yo
 - any event `Kind` of `10000` up to (and including) `19999` are considered `Replacable`
 ## Parameterized Replaceable
 
-events are **parameterized replaceable**, which means that, for each combination of `pubkey`, `kind` and the `d` tag's first value, only the latest event MUST be stored by relays, older versions MAY be discarded.
+Parameterized Replacable events are a more flexible than the 'Replacable' events. Where the 'Replacable' events will exist once for your public key + kind (example: your profile picture), the 'Parameterized Replacable' introduces the `d` tag. This makes it so that you can have multiple events of the same kind, and still modify them later on.
 
+Take for example a calendar event. You're one person (pubkey) but you should be able to organize multiple meetings at once. let's say, you're organising a birthday party, you can use [NIP-52](https://nostr-nips.com/nip-52) and create a `kind=31922` event which also requires you to provide a `d` tag with a unique GUID. This way you can make countless calendar events. Your event will include who's invited, the when and where, and also a location (your house).
+
+If for some reason you want to change the location to a friend's house instead, you now don't have to create an entirely new calendar item. You can just send the same `kind=31922` event, but with the altered location. The only thing you have to do is make sure the `d` tag is the same as the one you originally sent.
+
+The relays will pick up this event and notice they already have a version of this event. But since this one is newer, they will store the new event and discard the old one.
 ### Example use-cases
-- ??
+- Fixing a type in your long-form post ([NIP-23](https://nostr-nips.com/nip-23))
+- Update the shipping-costs of an item for sale ([NIP-15](https://nostr-nips.com/nip-15), Kind [30018](https://nostr-nips.com/nip-15#event-30018-create-or-update-a-product))
+- A calendar event, changing location ([NIP-52](https://nostr-nips.com/nip-52))
 
 ### Applies to kinds
 - Any event `Kind` of `30000` up to (and including) `39999` are considered `Parameterized Replacable`
