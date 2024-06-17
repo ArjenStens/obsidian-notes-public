@@ -1,3 +1,8 @@
+---
+publish: true
+---
+
+
 | NIP                                 | kind    | description                | Lifetime                                                                         |
 | ----------------------------------- | ------- | -------------------------- | -------------------------------------------------------------------------------- |
 | [1](https://nostr-nips.com/nip-01)  | `0`     | Metadata                   | [[Nostr - Event lifetimes#Replaceable\|Replaceable]]                             |

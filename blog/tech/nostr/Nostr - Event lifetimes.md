@@ -1,8 +1,12 @@
-**Much like when you post something**
+---
+publish: true
+---
+
 
 ## Regular
-
+Regular events will 'forever' be stored on Nostr, unless explicitly deleted by all relays, either through a [NIP-09 (delete)](https://nostr-nips.com/nip-09) event or at their own accord.
 ### Applies to kinds
+- Text notes [NIP-01](https://nostr-nips.com/nip-01)
 - Any event `Kind` of `1000` up to (and including) `9999`
 ## Ephemeral
 Ephemeral messages are essentially a 'fire and forget' message. There is no need to retain the information of this event for a long time. This is generally used for handling communication between the relay and the client, such as authentication or payment requests.
