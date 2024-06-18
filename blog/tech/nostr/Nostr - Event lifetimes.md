@@ -1,7 +1,7 @@
 ---
 publish: true
 ---
-
+**Nostr knows different kinds of event lifecycles (or, lifetimes). In some cases, you want to only keep one copy of an event (like your profile). In other instances like a public announcement of a product sale, you might not want that to stick around forever. Below you can find a quick summary of each of the event lifetimes Nostr has to offer.**
 
 ## Regular
 Regular events will 'forever' be stored on Nostr, unless explicitly deleted by all relays, either through a [NIP-09 (delete)](https://nostr-nips.com/nip-09) event or at their own accord.
@@ -47,8 +47,17 @@ The relays will pick up this event and notice they already have a version of thi
 - Any event `Kind` of `30000` up to (and including) `39999` are considered `Parameterized Replacable`
 ---
 ## Expiring
-- TODO
+An expiration timestamp can be added to any `kind` to signify to relays that this event loses significance after the defined point in time has passed. Essentially telling the relays they can get rid of it and delete it from their databases.
 
+The timestamp is defined as a UNIX timestamp in seconds, the detailed spec is defined in [NIP-40](https://nostr-nips.com/nip-40)
 
+```json
+"kind": 1337 # Can be any
+"tags": [ 
+	["expiration", "1600000000"] # UNIX timestamp in seconds
+],
+```
+### ### Example use-cases
+- Sales announcements
 ### Applies to kinds
 - Any
