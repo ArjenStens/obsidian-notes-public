@@ -13,9 +13,9 @@ publish: true
 | `5`     | [9](https://nostr-nips.com/nip-09)  | Event Deletion                         | [[Nostr - Event lifetimes#Regular\|Regular]]                                     |
 | `6`     | [18](https://nostr-nips.com/nip-18) | Repost                                 | [[Nostr - Event lifetimes#Regular\|Regular]]                                     |
 | `7`     | [25](https://nostr-nips.com/nip-25) | Reaction                               | [[Nostr - Event lifetimes#Regular\|Regular]]                                     |
-| `8`     | [58](https://nostr-nips.com/nip-58) | Badge Award                            | [[Nostr - Event lifetimes#Regular\|Regular]] (immutable)                         |
+| `8`     | [58](https://nostr-nips.com/nip-58) | Badge Award                            | [[Nostr - Event lifetimes#Regular\|Regular]]                                     |
 | `16`    | [18](https://nostr-nips.com/nip-18) | Generic Repost                         | [[Nostr - Event lifetimes#Regular\|Regular]]                                     |
-| `40`    | [28](https://nostr-nips.com/nip-28) | Channel Creation                       | ?                                                                                |
+| `40`    | [28](https://nostr-nips.com/nip-28) | Channel Creation                       | [[Nostr - Event lifetimes#Regular\|Regular]]                                     |
 | `41`    | [28](https://nostr-nips.com/nip-28) | Channel Metadata                       | [[Nostr - Event lifetimes#Replaceable\|Replaceable]]                             |
 | `42`    | [28](https://nostr-nips.com/nip-28) | Channel Message                        | [[Nostr - Event lifetimes#Regular\|Regular]]                                     |
 | `43`    | [28](https://nostr-nips.com/nip-28) | Channel Hide Message                   | [[Nostr - Event lifetimes#Regular\|Regular]]                                     |

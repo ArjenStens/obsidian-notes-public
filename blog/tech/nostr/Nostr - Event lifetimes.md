@@ -10,8 +10,12 @@ Regular events will 'forever' be stored on Nostr, unless explicitly deleted by a
 
 ### Applies to kinds
 
-- Text notes [NIP-01](https://nostr-nips.com/nip-01)
-- Any event `Kind` of `1000` up to (and including) `9999`
+- Kind `1` (Text notes)
+- Kind `4` up to (and including) 40
+- Kind `42`
+- Kind `43`
+- Kind `44`
+- Kind `1000` up to (and including) `9999`
 
 ---
 ## Ephemeral
@@ -42,9 +46,10 @@ Relays will therefore only keep one event of the `Kind`s in this category for yo
 
 ### Applies to kinds
 
-- `Kind=0`
-- `Kind=3`
-- any event `Kind` of `10000` up to (and including) `19999` are considered `Replacable`
+- Kind `0`
+- Kind `3`
+- Kind `41`
+- Kind `10000` up to (and including) `19999` are considered `Replacable`
 
 ---
 
@@ -66,7 +71,7 @@ The relays will pick up this event and notice they already have a version of thi
 
 ### Applies to kinds
 
-- Any event `Kind` of `30000` up to (and including) `39999` are considered `Parameterized Replacable`
+- Kind `30000` up to (and including) `39999` are considered `Parameterized Replacable`
 
 ---
 
