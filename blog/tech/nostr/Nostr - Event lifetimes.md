@@ -10,7 +10,7 @@ Regular events will 'forever' be stored on Nostr, unless explicitly deleted by a
 
 ### Applies to kinds
 
-- Kind `1` (Text notes)
+- Kind `1`
 - Kind `4` up to (and including) 40
 - Kind `42`
 - Kind `43`
