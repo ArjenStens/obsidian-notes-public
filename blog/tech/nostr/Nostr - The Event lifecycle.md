@@ -4,6 +4,7 @@ publish: true
 
 **Nostr knows different kinds of event lifecycles (or, lifetimes). In some cases, you want to only keep one copy of an event (like your profile). In other instances like a public announcement of a product sale, you might not want that to stick around forever. Below you can find a quick summary of each of the event lifetimes Nostr has to offer.**
 
+To view a full list of all kinds + their respective lifetime, check out this overview: [[Nostr - The Event lifecycle]].
 ## Regular
 
 Regular events will 'forever' be stored on Nostr, unless explicitly deleted by all relays, either through honoring a [NIP-09 (delete)](https://nostr-nips.com/nip-09) event or at their own accord.
@@ -38,8 +39,6 @@ Ephemeral messages are essentially a 'fire and forget' message. There is no need
 Replacable events are ones where only the latest version of it is relevant. For example your profile picture or your Lightning wallet address. You don't want people to send money to an old address that's no longer in use.
 
 Relays will therefore only keep one event of the `Kind`s in this category for your public key. That means if you want to update say your profile picture. You publish a new event of `kind=0` and every relay will save this latest event and discard any of your earlier events of `kind=0`.
-
-To gain a full list of all kinds + their respective lifetime, check out this overview: [[Nostr - The Event lifecycle]].
 ### Example use-cases
 
 - Profile picture
