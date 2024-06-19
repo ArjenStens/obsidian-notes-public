@@ -39,7 +39,7 @@ Replacable events are ones where only the latest version of it is relevant. For 
 
 Relays will therefore only keep one event of the `Kind`s in this category for your public key. That means if you want to update say your profile picture. You publish a new event of `kind=0` and every relay will save this latest event and discard any of your earlier events of `kind=0`.
 
-To gain a full list of all kinds + their respective lifetime, check out this overview: [[Nostr - Event lifetimes]].
+To gain a full list of all kinds + their respective lifetime, check out this overview: [[Nostr - The Event lifecycle]].
 ### Example use-cases
 
 - Profile picture

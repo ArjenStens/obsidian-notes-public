@@ -15,7 +15,7 @@ Below you find some links to my blogposts.
 ## The Tech
 
 - [[Nostr - Nips and Kinds]]
-- [[Nostr - Event lifetimes]]
+- [[Nostr - The Event lifecycle]]
 - [[How to avoid hotspot throttling in the USA on Android]]
 - [[Prevent USB from powering 3D-printer display]]
 - [[Arduino String Class alternative (against memory-fragmentation)]]
