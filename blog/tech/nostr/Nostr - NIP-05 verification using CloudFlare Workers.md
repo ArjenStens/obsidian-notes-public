@@ -1,15 +1,15 @@
 ---
 publish: true
 ---
-**As I'm diving into Nostr, I'm learning that it's a good idea to get NIP-05 verified. This is nothing more than a tool to make you more findable in a web of public keys. NIP-05 wil help you be findable by yourname@somedomain.com instead of a public key that look like this: npub1hw6amg8p24ne08c9gdq8hhpqx0t0pwanpae9z25crn7m9uy7yarse465gr**
+**As I'm diving into Nostr, I'm learning that it's a good idea to get NIP-05 verified. This is nothing more than a tool to make you more findable in a web of public keys or to prove you have access to a domain. [NIP-05](https://nostr-nips.com/nip-05) wil help you be findable by yourname@somedomain.com instead of a public key that look like this: `npub1hw6amg8p24ne08c9gdq8hhpqx0t0pwanpae9z25crn7m9uy7yarse465gr`**
 
 ## Prerequisites
-- A Nostr private/public keypair
+- A Nostr private/public key-pair
 - A CloudFlare account
-- 1 or more domain names tied to your cloudflare account
+- At least one tied to your CloudFlare account
 
 ## Assumptions
-I'm going to assume that you own your domain and that you are only trying to NIP-05 verify your own Nostr account.
+I'm going to assume that you own your domain and that you are only trying to [NIP-05](https://nostr-nips.com/nip-05) verify your own Nostr account.
 
 ## How NIP-05 Verification works
 NIP-05 verification works by adding an identifier to your profile (Kind `0` event). This identifier looks like an email address. Mine is `arjen@arjenstens.com`, and the domain should be either owned by you, OR the owner has to add your identity to their domain.
@@ -60,10 +60,11 @@ Under Zone, you should select the domain that you have linked to your Cloudflare
 
 ![[cloudflare-worker-2.png]]
 
-Once you've added the route, you should be able to call your nip-05 verification endpoint. In my case the following url would be called by clients. 
+Once you've added the route, you should be able to call your nip-05 verification endpoint. In my case the following URL would be called by clients. 
 ```url
 https://arjenstens.com/.well-known/nostr.json?name=arjen
 ```
 Because we set a wildcard on the route, any request will resolve my name/npub. Example:
 
 ![[cloudflare-worker-response.png]]
+![[cloudflare-worker-primal.png]]
