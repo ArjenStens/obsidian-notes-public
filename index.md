@@ -14,8 +14,12 @@ Below you find some links to my blogposts.
 
 ## The Tech
 
+### Nostr
 - [[Nostr - Nips and Kinds]]
 - [[Nostr - The Event lifecycle]]
+- [[Nostr - NIP-05 verification using CloudFlare Workers]]
+
+### Other
 - [[How to avoid hotspot throttling in the USA on Android]]
 - [[Prevent USB from powering 3D-printer display]]
 - [[Arduino String Class alternative (against memory-fragmentation)]]
