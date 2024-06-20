@@ -1,6 +1,6 @@
 ---
 publish: true
-featured_image: cloudflare-worker 1.jpg
+image: "[[cloudflare-worker 1.jpg]]"
 ---
 ![[cloudflare-worker 1.jpg]]
 **As I'm diving into Nostr, I'm learning that it's a good idea to get NIP-05 verified. This is nothing more than a tool to make you more findable in a web of public keys or to prove you have access to a domain. [NIP-05](https://nostr-nips.com/nip-05) wil help you be findable by yourname@somedomain.com instead of a public key that look like this: `npub1hw6amg8p24ne08c9gdq8hhpqx0t0pwanpae9z25crn7m9uy7yarse465gr`**
