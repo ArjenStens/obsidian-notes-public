@@ -74,7 +74,6 @@ The relays will pick up this event and notice they already have a version of thi
 - Kind `30000` up to (and including) `39999` are considered `Parameterized Replacable`
 
 ---
-
 ## Expiring
 
 An expiration timestamp can be added to any `kind` to signify to relays that this event loses significance after the defined point in time has passed. Essentially telling the relays they can get rid of it and delete it from their databases.
